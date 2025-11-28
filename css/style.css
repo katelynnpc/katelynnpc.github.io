@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header, nav, main, footer{
+    display: block;
+}
+body{
+    font-family: 'Sora', sans-serif;
+    font-weight: 300;
+    line-height: 27px;
+}
+header{
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #e6dcf2;
+}
+.logo{
+    flex: 2;
+    color: #6D597A;
+    padding: 25px 20px 20px 120px;
+    width: 30%;
+    font-size: 40px;
+}
+nav{
+    flex: 5;
+    align-items: center;
+    justify-content: center;
+}
+nav a{
+    display: block;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    text-decoration: none;
+    color: #6D597A;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+nav ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-around;
+}
+nav li{
+    display: inline-block;
+    text-align: center;
+}
+#wrapper{
+    margin-left: 7.5em;
+    margin-right: 7.5em;
+    background-color: #e9edc9;
+}
+main{
+    display: block;
+}
+main .pagetitle{
+    color: #6D597A;
+    font-size: larger;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+}
+.twoblockcontent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2em;
+}
+main .twoblockcontent .textLeft{
+    color: #6D597A;
+    font-size: x-large;
+    padding: 2em;
+
+}
+main .twoblockcontent .imageRight{
+    text-align: center;
+}
+main .twoblockcontent .imageRightContact{
+    text-align: center;
+}
+main .twoblockcontent .imageRight img{
+    text-align: center;
+    border-width: 10px;
+    border-color: #6D597A;
+    border-style: solid;
+}
+.images {
+    display: flex;               
+    flex-direction: row;
+    gap: 10px;                   
+    margin-right: 20px;
+    margin-left: 90px;          
+}
+main .welcometag{
+    padding: 2em;
+    color: #6D597A;
+    font-weight: bolder;
+    text-align: center;
+    font-size: x-large;
+}
+.theatretable{
+    float: right;
+}
+table{
+    border: 5px solid #6D597A;
+}
+td, th{
+    padding: 0.5em;
+    text-align: right;
+    font-weight: lighter;
+}
+.theading{
+    font-weight: bold;
+}
+.altrow{
+    background-color: #e6dcf2;
+}
+.altrowW{
+    background-color: #fff;
+}
+.twoblockcontentDetails{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2em;
+}
+main .twoblockcontentDetails .textLeft h4{
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+main .twoblockcontentDetails .textLeft{
+    color: #6D597A;
+    font-size: xx-large;
+    padding: 2em;
+}
+main .twoblockcontentDetails .textLeft div{
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+label{
+    float: left;
+    display: block;
+}
+main .twoblockcontentDetails .imageRight{
+    text-align: center;
+}
+footer{
+    background-color: #6D597A;
+    color: white;
+    text-align: center;
+}
+
+header label{
+    color: #6D597A;
+    font-size: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+}
+#nav{
+    display: none;
+}
+
+/* Media Query for Smartphones */
+@media only screen and (max-width: 480px) {
+    .logo {
+      padding: 25px 20px 20px 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+    }
+    header label{
+        display: block;
+    }
+  
+    nav {
+      flex: none;
+      text-align: center;
+      margin-top: 50px;
+    }
+    nav a{
+        display: block;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        text-decoration: none;
+        color: #6D597A;
+        text-align: center;
+        font-weight: bold;
+        font-size: medium;
+    }
+  
+    nav ul {
+      display: block;
+      margin-top: 2px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 1s;
+    }
+    #nav:checked ~nav ul{
+        max-height: 500px;
+    }
+  
+    nav li {
+      display: block;
+      margin: 2px;
+    }
+  
+    #wrapper {
+      margin-left: 1em;
+      margin-right: 1em;
+    }
+  
+    main .pagetitle {
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  
+    .twoblockcontent {
+      display: block;
+    }
+  
+    main .twoblockcontent .textLeft {
+      padding: 1em;
+      font-size: medium;
+    }
+  
+    main .twoblockcontent .imageRight {
+      text-align: center;
+      margin-top: 1em;
+    }
+  
+    main .twoblockcontent .imageRight img {
+      max-width: 100%;
+    }
+    .imageRightContact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      .imageRightContact img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+  
+    main .welcometag {
+      padding: 1em;
+    }
+  
+    .theatretable {
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    table {
+      width: 100%;
+    }
+  
+    main .twoblockcontentDetails .textLeft {
+      padding: 1em;
+    }
+  }
